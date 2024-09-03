@@ -7,7 +7,6 @@ import { mobile } from "../responsive";
 import { Add, Remove } from "@mui/icons-material";
 import { useSelector,useDispatch } from "react-redux";
 import {removeProduct} from '../redux/cartRedux'
-import axios from 'axios'
 import { Link } from "react-router-dom";
 import {publicRequest} from '../requestMethods'
 

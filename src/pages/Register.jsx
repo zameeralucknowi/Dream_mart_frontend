@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useState } from "react";
 import {publicRequest} from '../requestMethods'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 
 const Container = styled.div`
   width: 100vw;
@@ -55,6 +55,7 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  margin-left:70px;
 `;
 
 const Error = styled.div`
@@ -63,15 +64,11 @@ const Error = styled.div`
   margin-bottom: 10px;
 `;
 
-const Link = styled.a`
-  margin: 5px 0px;
-  font-size: 14px;
-  text-decoration: underline;
-  cursor: pointer;
-`;
-
 const  Already = styled.p` 
   margin-right:75px;
+  margin: 5px 0px;
+  font-size: 14px;
+  cursor: pointer;
 `
 
 const Register = () => {
@@ -122,7 +119,9 @@ const Register = () => {
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Already>Already Have an Account?<Link href="/login" > LOGIN</Link></Already>
+          <Link to={'/login'} >  
+          <Already>Already Have an Account?Login</Already>
+          </Link>
           <Button onClick={handleRegister} >CREATE</Button>
         </Form>
       </Wrapper>

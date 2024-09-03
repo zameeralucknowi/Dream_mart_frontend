@@ -86,7 +86,6 @@ const Message = styled.h3`
 `
 
 const Orders = () => {
-    const cart = useSelector(state=>state.cart)
     const [orders,setOrders] = useState([]);
     const user = useSelector(state=>state.user.currentUser);
 
@@ -103,7 +102,7 @@ const Orders = () => {
             }
         }
         getOrders();
-    },[])
+    },[user._id])
   return (
     <OrdersContainer>
     {orders.map((order) => (
@@ -123,7 +122,7 @@ const Orders = () => {
         </ProductList>
       </OrderCard>
     ))}
-    {orders.length==0 && <Message>No orders Yet</Message>}
+    {orders.length===0 && <Message>No orders Yet</Message>}
     <ContinueButton to="/">Continue Shopping</ContinueButton>
   </OrdersContainer>
   )
