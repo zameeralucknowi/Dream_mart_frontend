@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'https://dream-mart.onrender.com/api/';
+const BASE_URL = 'https://dream-mart-backend.onrender.com/api/';
 
 const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzdhZWMzOTIyNDcxNjc2ZmI4NjBlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyNDg3NDM5OSwiZXhwIjoxNzI1MTMzNTk5fQ.a1oACQy5-uqN8XVib-igf9nlvFnZVo4tc6qed2yy7IY";
 
