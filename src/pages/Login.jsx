@@ -68,6 +68,10 @@ const Para = styled.p`
 const Error = styled.div`
 color : red;
 `
+const Test = styled.div`
+  color: blue;
+  margin-bottom: 20px;
+`;
 
 const Login = () => {
 
@@ -83,8 +87,13 @@ const Login = () => {
   const {isFetching,error} = useSelector(state => state.user);
 
   return (
+    
     <Container>
       <Wrapper>
+      <Test>
+          <p>Email: admin@gmail.com</p>
+          <p>Password: admin</p>
+        </Test>
         <Title>SIGN IN</Title>
         <Form>
           <Input placeholder="email" type="email" onChange={(e)=>setEmail(e.target.value)} />

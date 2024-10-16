@@ -179,6 +179,11 @@ const RemoveButton = styled.button`
   })}
 `;
 
+const TestCredentials = styled.div`
+  color: blue;
+  margin-top: 20px;
+`;
+
 const Cart = () => {
 
   const cart = useSelector(state => state.cart)
@@ -255,6 +260,11 @@ const Cart = () => {
               </Product>
             ))}
             <Hr />
+            {/* Test credentials for checkout */}
+            <TestCredentials>
+              <p>Email: payment@paypal.example.com</p>
+              <p>Password: paypal1234</p>
+            </TestCredentials>
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
